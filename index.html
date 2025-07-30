@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développeur Web Professionnel | Création de Sites Web Sur Mesure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #6e8efb;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .typewriter {
+            border-right: 3px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #6e8efb; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-indigo-600">SenDigital</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-indigo-600 transition">Accueil</a>
+                    <a href="#services" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-indigo-600 transition">Services</a>
+                    <a href="#portfolio" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-indigo-600 transition">Portfolio</a>
+                    <a href="#a-propos" class="nav-link px-3 py-2 text-sm font-medium text-gray-900 hover:text-indigo-600 transition">À propos</a>
+                    <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#accueil" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Accueil</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Services</a>
+                <a href="#portfolio" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">Portfolio</a>
+                <a href="#a-propos" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600">À propos</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="gradient-bg text-white pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Je crée des sites web <span class="typewriter">exceptionnels</span></h1>
+                    <p class="text-xl mb-8">Développeur web passionné, je conçois des sites modernes, rapides et optimisés pour convertir vos visiteurs en clients.</p>
+                   
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Développeur web au travail" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Des solutions web complètes adaptées à vos besoins spécifiques</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Développement Web</h3>
+                    <p class="text-gray-600">Création de sites web sur mesure, optimisés pour les performances et le référencement, avec les dernières technologies.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Design Responsive</h3>
+                    <p class="text-gray-600">Des interfaces qui s'adaptent parfaitement à tous les appareils, du smartphone à l'écran large.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">E-commerce</h3>
+                    <p class="text-gray-600">Solutions e-commerce complètes avec gestion de produits, paiements sécurisés et intégration CRM.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO</h3>
+                    <p class="text-gray-600">Optimisation pour les moteurs de recherche afin d'améliorer votre visibilité et attirer plus de clients.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Optimisation</h3>
+                    <p class="text-gray-600">Amélioration des performances de votre site existant pour une expérience utilisateur fluide.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Maintenance</h3>
+                    <p class="text-gray-600">Services de maintenance et support technique pour garder votre site à jour et sécurisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mon Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Découvrez quelques-uns de mes projets récents</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Projet e-commerce" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Boutique en ligne</h3>
+                        <p class="text-gray-600 mb-4">Plateforme e-commerce complète avec système de paiement et gestion des stocks.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">React</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Node.js</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">MongoDB</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">1</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="c:\Users\Lenovo\Downloads\pexels-negativespace-34600.jpg" alt="Site vitrine entreprise" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Site Corporate</h3>
+                        <p class="text-gray-600 mb-4">Site vitrine moderne pour une entreprise de services avec blog intégré.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Next.js</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Sanity CMS</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">2</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Application web" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Application Web</h3>
+                        <p class="text-gray-600 mb-4">Outil de gestion de projet avec tableau Kanban et suivi du temps.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Vue.js</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">Firebase</span>
+                            <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">D3.js</span>
+                        </div>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition">3</a>
+                    </div>
+                </div>
+            </div>
+            
+           
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="a-propos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Développeur web" class="rounded-full w-64 h-64 object-cover shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">À propos de moi</h2>
+                    <p class="text-lg text-gray-600 mb-6">Je combine créativité et expertise technique pour créer des solutions web performantes et esthétiques.</p>
+                    <p class="text-lg text-gray-600 mb-8">Passionné par les nouvelles technologies et les bonnes pratiques de développement, je m'engage à fournir des produits de qualité qui répondent parfaitement aux besoins de mes clients.</p>
+                    
+                  
+                    
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">JavaScript</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">React</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">Node.js</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">PHP</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">WordPress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Témoignages</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Ce que mes clients disent de mon travail</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl">★</div>
+                    </div>
+                    <p class="mb-6">"Le développeur a parfaitement compris nos besoins et a livré un site web qui a dépassé nos attentes. Le suivi après la livraison est impeccable."</p>
+                    <div class="flex items-center">
+                        <img src="pexels-pixabay-37546.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Fatou Séne</h4>
+                          
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl">★</div>
+                    </div>
+                    <p class="mb-6">"Notre boutique en ligne fonctionne parfaitement et a permis d'augmenter nos ventes de 40%. Un travail professionnel et une communication excellente."</p>
+                    <div class="flex items-center">
+                        <img src="pexels-lara-jameson-9363204.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Pierre Biagui</h4>
+                          
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl mr-2">★</div>
+                        <div class="text-yellow-400 text-2xl">★</div>
+                    </div>
+                    <p class="mb-6">"Rapide, efficace et très compétent. Notre application web est maintenant un outil indispensable pour notre équipe. Je recommande vivement !"</p>
+                    <div class="flex items-center">
+                        <img src="pexels-moses-loeto-2151644178-32636192.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Oussmane Sakho</h4>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Contactez-moi</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Prêt à démarrer votre projet ? Discutons-en !</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 gradient-bg text-white p-12">
+                        <h3 class="text-2xl font-bold mb-6">Informations de contact</h3>
+                        
+                        <div class="flex items-start mb-8">
+                            <i class="fas fa-envelope text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p>SenDigital@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-8">
+                            <i class="fas fa-phone-alt text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Téléphone</h4>
+                                <p>+221 78 192 11 99</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold mb-1">Adresse</h4>
+                                <p>Plateau, Dakar, Senegal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="font-bold mb-4">Suivez-moi</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition">
+                                    <i class="fab fa-dribbble"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-12">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-md hover:opacity-90 transition">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Questions fréquentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Trouvez des réponses aux questions les plus courantes</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium">Quel est votre processus de développement ?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Mon processus suit les étapes suivantes : 1) Analyse des besoins, 2) Conception UX/UI, 3) Développement, 4) Tests et corrections, 5) Déploiement, et enfin 6) Maintenance. Je garde le client informé à chaque étape et intègre ses feedbacks.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium">Quels sont vos tarifs ?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Mes tarifs varient selon la complexité du projet. Un site vitrine simple peut démarrer à 100 000 f, tandis qu'un site e-commerce complexe peut aller jusqu'à 300 000 ou plus. Je propose des devis personnalisés après avoir discuté de votre projet en détail.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium">Combien de temps prend la création d'un site web ?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Les délais dépendent de la complexité du projet. En moyenne : 2-3 semaines pour un site vitrine simple, 3-5 semaines pour un site d'entreprise plus complexe, et 5-7 semaines pour une boutique e-commerce complète avec intégration de paiement.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium">Proposez-vous des services d'hébergement ?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Oui, je peux gérer l'hébergement de votre site web sur des serveurs performants et sécurisés. Je propose différents packages d'hébergement adaptés à la taille et aux besoins de votre site, avec sauvegardes automatiques et support technique inclus.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <h3 class="text-lg font-medium">Quelle est votre politique de maintenance après livraison ?</h3>
+                        <i class="fas fa-chevron-down text-indigo-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-6 hidden">
+                        <p class="text-gray-600">Tous mes projets incluent une période de garantie de 30 jours après la livraison pour corriger d'éventuels bugs. Ensuite, je propose des contrats de maintenance mensuels ou annuels qui incluent mises à jour, sauvegardes, sécurité et support technique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à donner vie à votre projet web ?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contactez-moi dès aujourd'hui pour discuter de vos besoins et obtenir un devis personnalisé.</p>
+         <!--<a href="#contact" class="inline-block px-8 py-4 bg-white text-indigo-600 font-bold rounded-md hover:bg-gray-100 transition">Demander un devis gratuit</a> CTA Section -->   
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <a href="#" class="text-2xl font-bold text-white mb-4 inline-block">DevWebPro</a>
+                    <p class="mb-6 text-gray-400">Création de sites web sur mesure, performants et optimisés pour le succès de votre entreprise.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#a-propos" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Développement Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Design Responsive</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">E-commerce</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Optimisation SEO</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Maintenance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 DevWebPro. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                // Toggle content
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert(`Merci ${name} ! Votre message a été envoyé. Je vous répondrai dès que possible.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
